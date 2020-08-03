@@ -1,0 +1,4 @@
+fieldset > label , fieldset > legend  {
+    display: block;
+    
+}
