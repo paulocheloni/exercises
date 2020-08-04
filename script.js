@@ -1,6 +1,4 @@
-const estados = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
-
-function createOptions() {
+function createOptions(estados) {
     const select = document.getElementById('select-state');
     for (let i in estados) {
         const option = document.createElement('option');  
@@ -9,17 +7,13 @@ function createOptions() {
         }
 }
 
-createOptions ();
-
-
 function treatDay(day) {
     const formatedDay = Number(day.join(''));
     if (formatedDay < 0 && formatedDay > 31) {
         alert('formato de dia incorreto');
     } else {
         return formatedDay
-    }
-    
+    }    
 }
 
 function treatMonth(month) {
@@ -55,23 +49,17 @@ function formatDate() {
     return `${treatDay(day)}/${treatMonth(mes)}/${treatYear(year)}`
 }
 
-const sendForm = documet.getElementById('send-form');
-sendForm.addEventListener('submit', function (e) {
-    e.preventDefault();    
-    formatDate();
-});
+function initButtons () {
+    const sendForm = document.getElementById('send-form');
+    sendForm.addEventListener('submit', function (e) {
+        e.preventDefault();    
+        formatDate();
+        });
+}
 
-
-
-
-
-
-
-
-
-  
-   
-
-
-
+window.onload =  () => {
+    const estados = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
+    createOptions(estados);
+    initButtons();
+}
 
