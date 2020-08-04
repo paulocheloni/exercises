@@ -27,7 +27,7 @@ function treatMonth(month) {
 
 function treatYear(year) {
     const formatedYear = Number(year.join(''));
-    if (formatedYear < 0 ) {
+    if (formatedYear < 0 && formatedYear > 2100) {
         alert('formato de ano incorreto')
     } else {
         return formatedYear
