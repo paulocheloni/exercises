@@ -1,17 +1,35 @@
-@media screen and (max-width: 900px) and (min-width: 600px) {
-    div.example {
-      font-size: 50px;
-      padding: 50px;
-      border: 8px solid black;
-      background: yellow;
+@media screen and (min-width:1100px) {
+    .container {
+        display: flex;        
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: 500px;
+        width: 400px;
+        flex-flow:  wrap;
+    
     }
-  }
-  @media screen and (min-width:901px) and (max-width:1099px){
-      div.example {
-          font-size: 50px;
-          padding: 50px;
-          border: 8px solid black;
-          background: yellow;
-          background-color:blue;
-      }
-  }
+
+    .another {
+        max-width: 200px;
+    }
+
+    div.example {         
+        background-color: aqua;
+        display: flex;
+        height: 600px;
+        justify-content: center;
+        max-width: 100px;        
+        text-align: center; 
+                
+    }
+
+    p {
+        align-self: center;
+    }
+    div.example:nth-of-type(1) {
+        order: 2;
+    }
+   
+}
+
+
