@@ -1,0 +1,54 @@
+body {
+    margin: 0 10px
+}
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+h2 {
+    font-size: 1.8em;
+    
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width:800px) {
+    body {
+        background-color: aquamarine;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        max-width: 90%;
+        margin: auto;
+        
+    }
+
+    figure {
+        max-width: 30%;
+        justify-self: center;
+    }
+
+    
+
+    h2 {
+        width: 100%;
+        flex-basis: 8;
+    }
+}
