@@ -9,38 +9,33 @@
       
 </head>
 <body>
+    <script src="just-validate.js"></script>
     <script src="script.js" type="text/javascript" defer></script>    
-    <form action="" method="GET">
+    <form action="" method="GET" class="js-form">
         <div class="field">
-            <div class="field">      
+            <div class="field form-group">      
                 <label class="label" for="input-name">Name:</label>                        
                 <div class="control">          
-                    <input class="input" type="text" id="input-name" maxlength="40" required placeholder="Your Name">                    
+                    <input class="input form__input form-control" name="name" data-validate-field="name" type="text" id="input-name"   placeholder="Your Name">                    
                 </div>
             </div>
-            <div class="field">
+            <div class="field form-group">
                 <label class="label" for="input-email">Email:</label>
                 <div class="control">                
-                    <input class="input" type="email" id="input-email" maxlength="50" required placeholder=" your email">
+                    <input class="input form__input form-control" name="email" data-validate-field="email" type="email" id="input-email" maxlength="50"  placeholder=" your email">
                 </div>
             </div> 
             <div class="field">
                 <label class="label" for="input-cpf">CPF:</label>                        
                 <div class="control">                    
-                    <input class="input" type="text" id="input-cpf" maxlength="11" required placeholder="CPF">
+                    <input class="input" type="text" id="input-cpf" name="cpf" data-validate-field="cpf" maxlength="11" required placeholder="CPF">
                 </div>
             </div>
             <div class="field">
                 <label class="label" for="input-adress">Adress</label>
                 <div class="control">
-                    <input class="input" type="" id="input-adress" maxlength="200" required placeholder="Adress">
+                    <input class="input" type="" id="input-adress" name="adress" data-validate-field="adress" maxlength="200" required placeholder="Adress">
                 </div>                
-            </div>
-            <div class="field">
-                <label  class="label" for="input-city">City:</label>
-                <div class="control">
-                    <input class="input" type="te" id="input-city" maxlength="28" required placeholder="City">
-                </div>
             </div>
             <div class="field">
                 <label class="label" for="input-state">State: </label>
@@ -51,12 +46,18 @@
                     </div>
                 </div>                                
             </div>
+            <div class="field">
+                <label  class="label" for="input-city">City:</label>
+                <div class="control">
+                    <input class="input" type="te" id="input-city" data-validate-field="city" name="city" maxlength="28" required placeholder="City">
+                </div>
+            </div>            
             <div class="field">                
                 <div class="control">
                     <label class="radio" for="input-apartamento">Apartamento</label>
-                    <input  type="radio" id="input-apartamento" value="apartamento" name="residencia"> 
-                    <label class="radio" for="input-casa">casa</label>
-                    <input type="radio" id="input-casa" required value="casa" name="residencia">
+                    <input  type="radio" id="input-apartamento" data-validate-field="casa" name="casa" value="apartamento" > 
+                    <label class="radio" for="input-casa"  ></label>casa</label>
+                    <input type="radio" id="input-casa" data-validate-field="casa" value="casa" name="casa">
                 </div>                
             </div>           
                      
