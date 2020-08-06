@@ -43,8 +43,12 @@ p {
     }
 
     figure {
-        max-width: 30%;
-        justify-self: center;
+        max-width: 45%;        
+    }
+
+    figure:last-of-type {
+        min-width: 700px
+        
     }
     
 
