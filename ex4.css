@@ -1,6 +1,265 @@
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+@media screen and (max-width: 600px) {
+
+    .aside-two {
+        display: none;
+    }
+
+    .aside-one {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+    
+    body {
+        font-family: 'Montserrat',sans-serif; 
+        max-width: 100%;
+        padding: 20px;          
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;    
+    }
+    
+    header p {
+        text-align: center;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    nav {
+        order: -1;    
+        min-width: 100%;
+    }
+    
+    nav li {
+        font-weight: bolder; 
+        padding: 10px;
+        text-align: center;   
+    }
+    
+    p {
+        font-size: 1.2em;
+    }
+    
+    ul {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:900px) {
+    
+    html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+    
+    body {
+        display: flex;
+        font-family: 'Montserrat',sans-serif; 
+        width: 100%;
+        padding: 20px;
+        flex-flow: row;     
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;    
+    }
+    
+    header p {
+        text-align: center;
+        font-size: 1.3em;
+    }
+    
+    li {
+        list-style: none;
+    }
+
+    .main-content {
+        clear: both;
+    }
+    
+    nav {
+        order: -1;    
+        min-width: 100%;
+    }
+    
+    nav li {
+        font-weight: bolder; 
+        padding: 10px;
+        text-align: center;   
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+    ul {
+        padding: 0;
+    }
+    .aside-two {
+        font-size: 0.9em;
+        max-width: 50%;
+        flex-flow: nowrap;
+           
+    }
+
+    .aside-one {
+        max-width: 40%;
+        flex-flow: nowrap;
+        font-size:0.85em;
+        
+        order: 2
+    }
+
+    .container-aside {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+
+@media screen and (min-width:901px) and (max-width:1200px) {
+
+
+    aside {
+        font-weight: 600;
+    }
+
+    html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+    
+    body {
+        display: flex;
+        font-family: 'Montserrat',sans-serif; 
+        width: 100%;
+        padding: 20px;
+        flex-flow: row;     
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;    
+    }
+    
+    header p {
+        text-align: center;
+        font-size: 1.3em;
+    }
+    
+    li {
+        list-style: none;
+    }
+
+    
+    
+    nav {
+        width: 100%;
+        order: -1;    
+        
+    }
+
+    nav ul {
+        display: flex;
+        order: 1;
+        flex-flow: row;
+        width: 450px;
+        
+        flex-wrap: nowrap;
+    }
+    
+    nav li {
+        font-weight: bolder; 
+        padding: 10px;
+        text-align: center; 
+        
+        width: 150px; 
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+    ul {
+        padding: 0;
+    }
+    .aside-one {
+        max-width: 40%;
+        flex-flow: nowrap;
+        font-size:0.85em;
+        
+        order: 2
+    }
+
+    .aside-two {
+        font-size: 0.9em;
+        max-width: 50%;
+        flex-flow: nowrap;
+           
+    }
+
+    
+
+    .container-aside {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin: auto;
+    }
+
+    .main-content {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        
+    }
+
+    .main-content h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-content p {
+        max-width: 40%;
+        text-indent: 10px;
+        margin-right: 10px;
+        align-self: center;
+        
+    }
+
+}
+
+
+
+
