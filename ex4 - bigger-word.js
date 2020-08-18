@@ -6,7 +6,7 @@ const bigger = (sentence) => {
       longer = palavra.length;
     }
     return palavra;
-  });  
+  });
   const maior = phrase.filter((palavra) => longer === palavra.length);
   return maior;
 };
@@ -23,7 +23,7 @@ const getBigger = (word, longerWord) => {
 
 const alsoBigger = (sentence) => {
   let longerWord = "";
-  phrase = sentence.split(" ").filter((word, index, array) => {
+  const phrase = sentence.split(" ").filter((word, index, array) => {
     longerWord = getBigger(word, longerWord);
     if (index === array.length - 1) {
       return longerWord;
