@@ -30,7 +30,7 @@ const getTotalStudents = () =>
       allLessons[element].numeroEstudantes + allLessons[acc].numeroEstudantes
   );
 
-  // ex 11
+// ex 11
 const getMathStudents = () =>
   Object.keys(allLessons)
     .filter((element) => allLessons[element].materia === "Matemática")

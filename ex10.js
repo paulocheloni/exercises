@@ -43,11 +43,6 @@ const mapLessonsByPosition = (lesson, propertyPosition) => {
   return propValue;
 };
 
-const findPropertyIndex = (value, obj) => {
-  const index = Object.values(obj).indexOf(value);
-  return index;
-};
-
 const professorLesson3 = mapLessonsByPosition(lesson3, 2);
 
 // search for propertyName
@@ -66,32 +61,3 @@ const professorLesson2 = mapLessonsByPropertyName(lesson2, "professor");
 
 // search pair value
 // const
-
-const createDetailedReport = (fullreport, propertyName, nameValue) => {
-  const report = {};
-  report[propertyName] = nameValue;
-  report["aulas"] = fullreport
-    .map((element) => element[0])
-    .reduce((acc, number) => `${acc} ${number}`)
-    .split(" ");
-  report["estudantes"] = fullreport
-    .map((element) => element[1])
-    .reduce((acc, number) => acc + number);
-
-  return report;
-};
-
-const generateFullReport = (obj, propertyName, propertyValue) => {
-  const pairKeyValue = {};
-  pairKeyValue[propertyName] = propertyValue;
-  const fullreport = Object.keys(obj)
-    .map((element) => Object.values(obj[element]))
-    .filter(
-      (element) =>
-        element[findPropertyIndex(propertyValue, element)] === propertyValue
-    );
-  return fullreport;
-};
-const itemSearched = { materia: "Matemática" };
-const result = generateFullReport(allLessons, "professor", "Maria Clara");
-const report = createDetailedReport(result, "professor", "Maria Clara");

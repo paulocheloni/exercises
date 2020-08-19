@@ -26,42 +26,40 @@ const allLessons = Object.assign({
   lesson3: lesson3,
 });
 
-
-const createReport = (lesson, teacherName) => {
-    const result = 
-}
-
-console.log(createReport(allLessons, "Maria Clara"));
+const findPropertyIndex = (value, obj) => {
+  const index = Object.values(obj).indexOf(value);
+  return index;
+};
 /* {
   professor: 'Maria Clara',
   aulas: [ 'Matemática', 'Matemática' ],
   estudantes: 30
 } */
 const createDetailedReport = (fullreport, propertyName, nameValue) => {
-    const report = {};
-    report[propertyName] = nameValue;
-    report["aulas"] = fullreport
-      .map((element) => element[0])
-      .reduce((acc, number) => `${acc} ${number}`)
-      .split(" ");
-    report["estudantes"] = fullreport
-      .map((element) => element[1])
-      .reduce((acc, number) => acc + number);
-  
-    return report;
-  };
-  
-  const generateFullReport = (obj, propertyName, propertyValue) => {
-    const pairKeyValue = {};
-    pairKeyValue[propertyName] = propertyValue;
-    const fullreport = Object.keys(obj)
-      .map((element) => Object.values(obj[element]))
-      .filter(
-        (element) =>
-          element[findPropertyIndex(propertyValue, element)] === propertyValue
-      );
-    return fullreport;
-  };
-  const itemSearched = { materia: "Matemática" };
-  const result = generateFullReport(allLessons, "professor", "Maria Clara");
-  const report = createDetailedReport(result, "professor", "Maria Clara");
+  const report = {};
+  report[propertyName] = nameValue;
+  report["aulas"] = fullreport
+    .map((element) => element[0])
+    .reduce((acc, number) => `${acc} ${number}`)
+    .split(" ");
+  report["estudantes"] = fullreport
+    .map((element) => element[1])
+    .reduce((acc, number) => acc + number);
+
+  return report;
+};
+
+const generateFullReport = (obj, propertyName, propertyValue) => {
+  const pairKeyValue = {};
+  pairKeyValue[propertyName] = propertyValue;
+  const fullreport = Object.keys(obj)
+    .map((element) => Object.values(obj[element]))
+    .filter(
+      (element) =>
+        element[findPropertyIndex(propertyValue, element)] === propertyValue
+    );
+  return fullreport;
+};
+const itemSearched = { materia: "Matemática" };
+const result = generateFullReport(allLessons, "professor", "Maria Clara");
+const report = createDetailedReport(result, "professor", "Maria Clara");

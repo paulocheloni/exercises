@@ -62,5 +62,3 @@ const professorLesson2 = mapLessonsByPropertyName(lesson2, "professor");
 console.log(professorLesson2);
 
 // search pair value
-
-
