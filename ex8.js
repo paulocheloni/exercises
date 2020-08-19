@@ -23,9 +23,18 @@ const allLessons = Object.assign({
   lesson2: lesson2,
   lesson3: lesson3,
 });
-const mathClass = Object.keys(allLessons)
-  .filter((element) => allLessons[element].materia === "Matemática")
-  .reduce(
+
+const getTotalStudents = () =>
+  Object.keys(allLessons).reduce(
     (acc, element) =>
-      allLessons[acc].numeroEstudantes + allLessons[element].numeroEstudantes
+      allLessons[element].numeroEstudantes + allLessons[acc].numeroEstudantes
   );
+
+  // ex 11
+const getMathStudents = () =>
+  Object.keys(allLessons)
+    .filter((element) => allLessons[element].materia === "Matemática")
+    .reduce(
+      (acc, element) =>
+        allLessons[acc].numeroEstudantes + allLessons[element].numeroEstudantes
+    );
