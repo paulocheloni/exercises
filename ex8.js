@@ -16,7 +16,14 @@ const lesson1 = {
     numeroEstudantes: 10,
     professor: "Maria Clara",
     turno: "noite",
-  };
- 
+  };  
+  
   
   const allLessons = Object.assign({lesson1: lesson1, lesson2: lesson2, lesson3: lesson3});
+  const mathClass = Object.keys(allLessons)
+  .filter(element => allLessons[element].materia === 'Matemática')
+  .reduce((acc, element) => allLessons[acc].numeroEstudantes + allLessons[element].numeroEstudantes);
+  
+ 
+  
+
