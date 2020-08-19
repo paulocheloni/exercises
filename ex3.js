@@ -18,8 +18,8 @@ const lesson1 = {
     turno: 'noite',
   };
 
-  const insertShift = (obj, property, value) => {      
+  const insertProperty = (obj, property, value) => {      
       obj.property = value
   }
-  insertShift(lesson2, 'turno', 'manhã');
-  console.log(lesson2)
+  insertProperty(lesson2, 'turno', 'manhã');
+  
