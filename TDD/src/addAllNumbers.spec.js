@@ -1,5 +1,5 @@
 const assert = require('assert');
-const addAllnumbers = require('./addAllNumbers')
+const addAllnumbers = require('./addAllNumbers');
 // escreva a função addAllnumbers aqui
 
 const numbers = [9, 23, 10, 3, 8];

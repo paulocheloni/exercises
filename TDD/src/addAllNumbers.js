@@ -1,3 +1,4 @@
-const addAllNumbers = (array) => array.reduce((acc, element) => acc + element);
+const addAllNumbers = (arrayNumbers) =>
+  arrayNumbers.reduce((acc, element) => acc + element);
 
 module.exports = addAllNumbers;
