@@ -7,18 +7,17 @@ const removeVowels = (word) => {
     'o': "4",
     'u': "5",
   };
-  
-  const results = characters.map(element => {
+  let count = 1
+  const results = characters.map((element) => {
       if (encript[element]) {
-          element = encript[element];
+          element = count;
+          count += 1;
       }
       return element;
   });
 
-  return results;
+  return results.join('');
 };
-
-
 
 module.exports = removeVowels;
 
