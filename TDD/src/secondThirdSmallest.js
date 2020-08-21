@@ -2,7 +2,6 @@ function secondThirdSmallest(array) {
   const [, b, c] = [...array];
   return [b, c];
 }
-const parameter = [4, 10, 32, 9, 21, 90, 5, 11, 8, 6];
 
 const bubleSort = (array) => {
   let copy = 0;
@@ -18,8 +17,6 @@ const bubleSort = (array) => {
   return array;
 };
 // reference https://www.geeksforgeeks.org/bubble-sort/
-
-
 
 module.exports = {
   bubleSort: { bubleSort },
