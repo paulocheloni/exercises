@@ -1,5 +1,6 @@
 const assert = require('assert');
 const findTheNeedle = require('./findTheNeedle');
+
 // escreva a função findTheNeedle aqui
 
 let words = ['house', 'train', 'slide', 'needle', 'book'];

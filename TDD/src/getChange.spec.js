@@ -1,5 +1,5 @@
 const assert = require('assert');
-const getChange
+const getChange = require('./getChange.js')
 
 let result = getChange(1, 1); // no change/coins just an empty array
 let expected = [];
