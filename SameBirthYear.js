@@ -65,9 +65,7 @@ const books = [
 
 const expected_result = false;
 
-function authorUnique() {
-  
-    
+function authorUnique() {    
   const sameAge = books.map(function (book) {
     const birthYear = book.author.birthYear;
     let countSame = 0
