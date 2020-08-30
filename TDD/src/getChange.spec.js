@@ -1,6 +1,5 @@
 const assert = require('assert');
-const getChange = require('./getChange.js')
-
+import getChange from './ge'
 let result = getChange(1, 1); // no change/coins just an empty array
 let expected = [];
 assert.deepEqual(result, expected);
