@@ -73,9 +73,6 @@ const estudantes = [
     },
   ]
 
-
-
-
 function getStudantBestDiscipline () {
   return estudantes.map((estudante) => { 
     return {
@@ -84,8 +81,8 @@ function getStudantBestDiscipline () {
         if ( acc.nota > curValue.nota ) {
           return acc;
         }     
-        return curValue     
-       }).name,       
+        return curValue;     
+      }).name,       
     }
   });    
 }
