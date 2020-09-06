@@ -7,7 +7,7 @@ const fetchJoke = (apiURL, object) => {
         .then((response) => response.json())
         .then((data) => resolve(data));
     } else {
-      reject(new Error('endpoint não existe'));
+      reject(new Error('No ending point'));
     }
   });
 };
