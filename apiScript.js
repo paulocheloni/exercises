@@ -17,12 +17,12 @@ const object = {
 };
 
 const showJoke = async () => {
-  const {joke} = await fetchJoke(API_URL, object);
+  const { joke } = await fetchJoke(API_URL, object);
   const jokeContainer = document.createElement('span');
   const body = document.querySelector('body');
   jokeContainer.innerText = joke;
   jokeContainer.classList = 'joke';
-  body.appendChild(jokeContainer)
-}
+  body.appendChild(jokeContainer);
+};
 
-window.onload = () => showJoke()
+window.onload = () => showJoke();
