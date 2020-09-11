@@ -1,0 +1,32 @@
+.container-list { 
+    margin: auto auto;
+    text-align: center;
+
+}
+
+@media (max-width:450px) {
+    .container-list {
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+@media (min-width:451px) and (max-width:899px) {
+    .container-list {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+
+@media  (min-width:900px)  {
+    .container-list {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        justify-items: center;
+        max-width: 1200px;
+        
+    }
+}
