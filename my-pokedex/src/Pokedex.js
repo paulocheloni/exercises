@@ -4,13 +4,40 @@ import Pokemon from './Pokemon'
 import './Pokedex.css'
 
 class Pokedex extends Component {
+    constructor() {
+        super()
+        this.state = {
+            currentIndexPoke : 0
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick() {
+        
+        this.setState((previousIndex) => (
+            {
+            currentIndexPoke :  previousIndex.currentIndexPoke + 1
+        }))
+        
+        if(this.state.currentIndexPoke >= pokemons.length - 1) {
+            this.setState((previousIndex) =>({
+                currentIndexPoke : 0
+            })) 
+        }
+        
+    }
+
+
     render() {
         return (
-            <div className='container-list'>
-                { pokemons.map(pokemon => 
-                    <Pokemon props={pokemon}/>
-                )}
+            <div>                       
+                <div className='container-list'>
+                { pokemons.filter( (pokemon, index) => this.state.currentIndexPoke === index                        
+                ).map(pokemon => <Pokemon props={pokemon}/>)}
+                </div>
+                <button onClick={this.handleClick}>Next</button> 
             </div>
+                    
         )
     }
 }
